@@ -28,17 +28,22 @@ def login():
     if user is not None and user.verify_password(form.password.data):
       login_user(user)
       flash('Login successful!')
-      return render_template('manuals.html',form=form)
+      return render_template('home.html',form=form)
     flash('Invalid email address or password.')
     
     return render_template('login.html',form=form)
 
   return render_template('login.html',title='Login',form=form)
 
-@app.route("/manuals")
+@app.route("/aquila_manual")
 @login_required
-def manuals():
-  return render_template('manuals.html')
+def aquila():
+  return render_template('/manuals/aquila_manual.html')
+
+@app.route("/da40_manual")
+@login_required
+def daforty():
+  return render_template('/manuals/da40_manual.html')
 
 @app.route("/logout")
 @login_required
