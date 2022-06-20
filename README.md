@@ -1,7 +1,2 @@
-# Flask - Lab 3.3
-
-This is a snapshot of the state blog app from Task 11 to Task 12.
-
-Functionality: Admin panel
-
-Previous task: flask-lab-3.2
+# Flask Web App
+This web app was built for Aviator Flight Center's Manuals. The pilot students will be able to see the aircrafts manuals without the ability to copy or share them
