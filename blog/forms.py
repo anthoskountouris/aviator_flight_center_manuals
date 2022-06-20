@@ -6,7 +6,7 @@ from blog.models import User
 class RegistrationForm(FlaskForm):
   username = StringField('Username',validators=[DataRequired(),Length(min=3,max=15)])
   email = StringField('Email',validators=[DataRequired(),Email()])
-  password = PasswordField('Password',validators=[DataRequired(),Regexp('^.{6,8}$',message='Your password should bebetween 6 and 8 characters long.')])
+  password = PasswordField('Password',validators=[DataRequired(),Regexp('^.{6,20}$',message='Your password should bebetween 6 and 8 characters long.')])
   confirm_password = PasswordField('Confirm Password',validators=[DataRequired(),EqualTo('password')])
   submit = SubmitField('Register')
 
