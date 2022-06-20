@@ -1,11 +1,41 @@
 {% extends "layout.html" %}
 {% block content %}
-<form method="POST" action="">
+<!-- <form method="POST" action="">
   {{ form.csrf_token }}
   {{ form.username.label }} {{ form.username }}{% for error in form.username.errors %}<span style="color: red;">[{{ error }}]</span>{% endfor %}
   {{ form.email.label }} {{ form.email }}
   {{ form.password.label }} {{ form.password }}
   {{ form.confirm_password.label }} {{ form.confirm_password }}
   <input type="submit" value="Register">
-</form>
+</form> -->
+
+<div class="container d-flex justify-content-center mt-4">
+  <form method="POST" action="">
+    <div class="mb-3">
+      {{ form.csrf_token }}
+      <label for="username" class="form-label">Username</label>
+      <div id="username">{{ form.username }}{% for error in form.username.errors %}<span style="color: red;">[{{ error }}]</span>{% endfor %}</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <div id="email"> {{ form.email }}</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <div id="password"> {{ form.password }}</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="confirm_password" class="form-label">Confirm Password</label>
+      <div id="confirm_password"> {{ form.confirm_password }}</div>
+    </div>
+
+    <button type="submit" class="btn btn-secondary" value="Register">Register</button>
+  </form>
+</div>
+
+
+
 {% endblock content %}

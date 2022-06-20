@@ -35,6 +35,11 @@ def login():
 
   return render_template('login.html',title='Login',form=form)
 
+@app.route("/manuals")
+@login_required
+def manuals():
+  return render_template('manuals.html')
+
 @app.route("/aquila_manual")
 @login_required
 def aquila():
