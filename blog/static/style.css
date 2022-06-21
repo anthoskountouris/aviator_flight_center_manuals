@@ -1,8 +1,24 @@
 h1{
-    color:rgb(83, 78, 78);
-    font-size: 40px;
+    color:black;
+    font-size: 50px;
 }
 
 #one{
     padding-top: 10%;
+}
+
+#viewer {
+    width:800px;
+    height:400px;
+    margin: 0 auto;
+    background-color:#ABABAB;
+  }
+
+#big_logo img{
+    width:70%;
+    height:70%;
+
+}
+#big_logo{
+    text-align: center;
 }
