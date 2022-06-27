@@ -38,13 +38,13 @@ body {
 }
 
 #viewer {
-    /* width:800px;
+    width:800px;
     height:400px;
     margin: 0 auto;
-    background-color:#ABABAB; */
-    width: 100%;
+    background-color:#ABABAB;
+    /* width: 100%;
     height: 660px; 
-    margin: auto;
+    margin: auto; */
   }
 
 #big_logo img{
