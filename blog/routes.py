@@ -40,15 +40,10 @@ def login():
 def manuals():
   return render_template('manuals.html')
 
-@app.route("/aquila_manual")
+@app.route("/ppl_manual")
 @login_required
-def aquila():
-  return render_template('/manuals/aquila_manual.html')
-
-@app.route("/da40_manual")
-@login_required
-def daforty():
-  return render_template('/manuals/da40_manual.html')
+def ppl():
+  return render_template('/manuals/ppl_manual.html')
 
 @app.route("/logout")
 @login_required
